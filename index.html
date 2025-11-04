@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <div id="loading_1">
+    <div id="loading1">
 
         <div class="loader-wrapper">
             <span class="loader-letter">L</span>
@@ -23,37 +23,49 @@
             <span class="loader-letter">.</span>
 
             <div class="loader"></div>
+        </div>
 
+        <div class="solar">
+            <i class="mercury"></i>
+            <i class="venus"></i>
+            <i class="earth"></i>
+            <i class="mars"></i>
+            <i class="belt"></i>
+            <i class="jupiter"></i>
+            <i class="saturn"></i>
+            <i class="uranus"></i>
+            <i class="neptune"></i>
         </div>
 
     </div>
 
-    <div id="loading_2">
+    <div id="loading2">
 
         <div class="gearbox">
         <div class="overlay"></div>
-            <div class="gear one">
+        
+        <div class="gear one">
             <div class="gear-inner">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
-            </div>
-            <div class="gear two">
+        </div>
+        <div class="gear two">
             <div class="gear-inner">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
-            </div>
-            <div class="gear three">
+        </div>
+        <div class="gear three">
             <div class="gear-inner">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
-            </div>
-            <div class="gear four large">
+        </div>
+        <div class="gear four large">
             <div class="gear-inner">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -62,14 +74,123 @@
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
-            </div>
+        </div>
 
             <div id="terminal">
+
+                <div class="container">
+                    <div class="terminal_toolbar">
+                        <div class="butt">
+                            <button class="btn btn-color"></button>
+                            <button class="btn"></button>
+                            <button class="btn"></button>
+                        </div>
+                        <p class="user">johndoe@admin: ~</p>
+                        <div class="add_tab">
+                            +
+                        </div>
+                    </div>
+                    <div class="terminal_body">
+                        <div class="terminal_promt">
+                            <span class="terminal_user">johndoe@admin:</span>
+                            <span class="terminal_location">~</span>
+                            <span class="terminal_bling">$</span>
+                            <span class="terminal_cursor"></span>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
             <div id="cpu_monitor">
+                <div class="grid-plane"></div>
+                <div class="stars-container">
+                  <div class="star-layer"></div>
+                  <div class="star-layer"></div>
+                  <div class="star-layer"></div>
+                </div>
+                <div class="checkbox-container">
+                  <input class="holo-checkbox-input" id="holo-check" type="checkbox" />
+                  <label class="holo-checkbox" for="holo-check">
+                    <div class="holo-box">
+                      <div class="holo-inner"></div>
+                      <div class="scan-effect"></div>
+                      <div class="holo-particles">
+                        <div class="holo-particle"></div>
+                        <div class="holo-particle"></div>
+                        <div class="holo-particle"></div>
+                        <div class="holo-particle"></div>
+                        <div class="holo-particle"></div>
+                        <div class="holo-particle"></div>
+                      </div>
 
+                      <div class="activation-rings">
+                        <div class="activation-ring"></div>
+                        <div class="activation-ring"></div>
+                        <div class="activation-ring"></div>
+                      </div>
+
+                      <div class="cube-transform">
+                        <div class="cube-face"></div>
+                        <div class="cube-face"></div>
+                        <div class="cube-face"></div>
+                        <div class="cube-face"></div>
+                        <div class="cube-face"></div>
+                        <div class="cube-face"></div>
+                      </div>
+                    </div>
+
+                    <div class="corner-accent"></div>
+                    <div class="corner-accent"></div>
+                    <div class="corner-accent"></div>
+                    <div class="corner-accent"></div>
+
+                    <div class="holo-glow"></div>
+                  </label>
+
+                  <div class="status-text"></div>
+
+                  <div class="activation-display">
+                    <div class="activation-line">cpuUsage: <span id="cpu-usage">0</span>%</div>
+                    <div class="activation-line">activating nuclear: power <span id="power-level">0</span>%</div>
+                    <div class="activation-line">O2 controlling: <span id="o2-status">50</span>% <span id="o2-ok">ok</span></div>
+                    <div class="activation-line">N2 <span id="n2-ok">ok</span></div>
+                    <div class="activation-line">life support: <span id="life-ok">ok</span></div>
+                  </div>
+
+                  <div class="frequency-spectrum">
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                    <div class="frequency-bar"></div>
+                  </div>
+
+                  <div class="data-chips">
+                    <div class="data-chip">STATUS: IDLE [0x4F]</div>
+                    <div class="data-chip">QUANTUM VERIFY: 82.6%</div>
+                    <div class="data-chip">SYNCH: PENDING</div>
+                    <div class="data-chip">0x7A2C8B9F</div>
+                  </div>
+                </div>
             </div>
 
         </div>
@@ -80,10 +201,14 @@
 
     <div id="school_1">
 
-    </div>
+        <div id="text">
 
-    <div id="school_2">
+        </div>
 
+        <div id="butns">
+
+        </div>
+    
     </div>
     
 
