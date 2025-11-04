@@ -1,9 +1,12 @@
 body{
+    display: flex;
     background-color: rgb(42, 56, 69);
     height: 100vh;
     width: 100vw;
     margin: 0;
-}
+    justify-content: center;
+    align-items: center;
+  }
 
 
 
@@ -22,22 +25,18 @@ body{
 
 
 
-#loading_1{
+#loading1{
     display: none;
     align-items: center;
     justify-content: center;
-
     background-color: rgb(44, 43, 43);
-
     height: 100vh;
     width: 100vw;
-
+    position: relative;
 }
 
-
-
 .loader-wrapper {
-  position: relative;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,6 +49,7 @@ body{
   border-radius: 50%;
   background-color: transparent;
   user-select: none;
+  z-index: 5;
 }
 
 .loader {
@@ -145,18 +145,261 @@ body{
   }
 }
 
+.solar {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  width: 180px;
+  border-radius: 90px;
+  -webkit-animation: none;
+  -moz-animation: none;
+  z-index: 1;
+  transform: scale(1);
+}
 
+.solar i {
+  border-radius: 250px;
+  display: block;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+}
 
+.solar i:before {
+  content: "";
+  border-radius: 25px;
+  background: black;
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: 45%;
+}
 
+.solar i.mercury {
+  width: 240px;
+  height: 240px;
+  margin-left: -120px;
+  left: 50%;
+  top: 50%;
+  margin-top: -120px;
+  -webkit-animation: orbit 0.5s linear infinite;
+  -moz-animation: orbit 0.5s linear infinite;
+}
 
+.solar i.mercury:before {
+  background: #6f5f5f;
+  height: 7px;
+  width: 7px;
+}
 
+.solar i.venus {
+  width: 330px;
+  height: 330px;
+  margin-left: -165px;
+  left: 50%;
+  top: 50%;
+  margin-top: -165px;
+  -webkit-animation: orbit 1s linear infinite;
+  -moz-animation: orbit 1s linear infinite;
+}
 
+.solar i.venus:before {
+  background: #e7a71f;
+  height: 10px;
+  width: 10px;
+}
 
+.solar i.earth {
+  width: 420px;
+  height: 420px;
+  margin-left: -210px;
+  left: 50%;
+  top: 50%;
+  margin-top: -210px;
+  -webkit-animation: orbit 1.5s linear infinite;
+  -moz-animation: orbit 1.5s linear infinite;
+}
 
+.solar i.earth:before {
+  background: #63bee2;
+  height: 10px;
+  width: 10px;
+}
 
+.solar i.mars {
+  width: 510px;
+  height: 510px;
+  margin-left: -255px;
+  left: 50%;
+  top: 50%;
+  margin-top: -255px;
+  -webkit-animation: orbit 2s linear infinite;
+  -moz-animation: orbit 2s linear infinite;
+}
 
-#loading_2{
-    display: flex;
+.solar i.mars:before {
+  background: red;
+  height: 10px;
+  width: 10px;
+}
+
+.solar i.belt {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border-width: 75px;
+  width: 720px;
+  height: 720px;
+  margin-left: -360px;
+  border-color: rgba(36, 35, 35, 0.21);
+  left: 50%;
+  top: 50%;
+  margin-top: -360px;
+  border-radius: 50%;
+}
+
+.solar i.jupiter {
+  width: 780px;
+  height: 780px;
+  margin-left: -390px;
+  left: 50%;
+  top: 50%;
+  margin-top: -390px;
+  -webkit-animation: orbit 2.5s linear infinite;
+  -moz-animation: orbit 2.5s linear infinite;
+}
+
+.solar i.jupiter:before {
+  background: #cf9b2b;
+  top: -15px;
+  height: 30px;
+  width: 30px;
+}
+
+.solar i.saturn {
+  width: 960px;
+  height: 960px;
+  margin-left: -480px;
+  left: 50%;
+  top: 50%;
+  margin-top: -480px;
+  -webkit-animation: orbit 3s linear infinite;
+  -moz-animation: orbit 3s linear infinite;
+}
+
+.solar i.saturn:before {
+  background: #cf7a2b;
+  top: -10px;
+  height: 20px;
+  width: 20px;
+}
+
+.solar i.saturn:after {
+  background: #fff;
+  width: 30px;
+  height: 1px;
+  content: "";
+  position: absolute;
+  display: block;
+  right: 43.5%;
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+}
+
+.solar i.uranus {
+  width: 1080px;
+  height: 1080px;
+  margin-left: -540px;
+  left: 50%;
+  top: 50%;
+  margin-top: -540px;
+  -webkit-animation: orbit 3.5s linear infinite;
+  -moz-animation: orbit 3.5s linear infinite;
+}
+
+.solar i.uranus:before {
+  background: #10c593;
+  top: -8px;
+  height: 15px;
+  width: 15px;
+}
+
+.solar i.neptune {
+  width: 1200px;
+  height: 1200px;
+  margin-left: -600px;
+  left: 50%;
+  top: 50%;
+  margin-top: -600px;
+  -webkit-animation: orbit 4s linear infinite;
+  -moz-animation: orbit 4s linear infinite;
+}
+
+.solar i.neptune:before {
+  background: #1470e4;
+  top: -8px;
+  height: 15px;
+  width: 15px;
+}
+
+@-webkit-keyframes orbit {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes glow {
+  0% {
+    box-shadow: none;
+  }
+  50% {
+    background: #ffeb00;
+    box-shadow: 0 0 20px orange;
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+@-moz-keyframes orbit {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  50% {
+    -moz-transform: rotate(-180deg);
+  }
+  100% {
+    -moz-transform: rotate(-360deg);
+  }
+}
+
+@-moz-keyframes glow {
+  0% {
+    box-shadow: none;
+  }
+  50% {
+    background: #ffeb00;
+    box-shadow: 0 0 20px orange;
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+/* ...existing code... */
+
+#loading2{
+    display: none;
     align-items: center;
     justify-content: center;
 
@@ -191,6 +434,7 @@ body{
   background: #111;
   height: 80vh;
   width: 80vw;
+
   padding: 0%;
   margin: 0%;
   position: relative;
@@ -346,8 +590,1018 @@ body{
 
 
 
+#terminal {
+    position: absolute; 
+    
+    bottom: 1px;
+    right: 1px;
+
+    background-color: #430000;
+
+    height: 55vh;
+    width: 40vw;
+
+    box-shadow: #0095ff 0px 0px 10px;
+
+    border-radius: 10px;
+}
+
+#cpu_monitor {
+    position: absolute; 
+    
+    bottom: 1px;
+    left: 1px;
+
+    background-color: #004300;
+
+    height: 40vh;
+    width: 38vw;
+
+    box-shadow: #888888 0px 0px 10px;
+
+    border-radius: 10px;
+  }
 
 
+
+
+#school_1{
+  display: none;
+  height: 95vh;
+  width: 95vw;
+  border-radius: 10px;
+
+  background-image: url('src_images/3.jpg');
+
+  margin: 1%;
+  padding: 1%;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  flex-direction: column;
+
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+
+#text{
+  display: flex;
+  height: 78vh;
+  width: 95vw;
+  border-radius: 10px;
+  background-color: #ffffff;
+
+}
+
+
+#butns{
+  display: flex;
+  height: 15vh;
+  width: 95vw;
+  border-radius: 10px;
+  background-color: #004300;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 2px;
+}
+
+.terminal_toolbar {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: #212121;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.butt {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-right: 5px;
+  font-size: 8px;
+  height: 12px;
+  width: 12px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 100%;
+  background: linear-gradient(#7d7871 0%, #595953 100%);
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 1px 0px #41403A, 0px 1px 1px 0px #474642;
+}
+
+.btn-color {
+  background: #ee411a;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.butt--exit {
+  background: linear-gradient(#f37458 0%, #de4c12 100%);
+}
+
+.add_tab {
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0 6px;
+  border-radius: 4px 4px 0 0;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.user {
+  color: #d5d0ce;
+  margin-left: 6px;
+  font-size: 14px;
+  line-height: 15px;
+}
+
+.terminal_body {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  padding-top: 2px;
+  font-size: 12px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  flex: 1;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.terminal_promt {
+  display: flex;
+}
+
+.terminal_promt span {
+  margin-left: 4px;
+}
+
+.terminal_user {
+  color: #1eff8e;
+}
+
+.terminal_location {
+  color: #4878c0;
+}
+
+.terminal_bling {
+  color: #dddddd;
+}
+
+.terminal_cursor {
+  display: block;
+  height: 14px;
+  width: 5px;
+  margin-left: 10px;
+  animation: curbl 1200ms linear infinite;
+}
+
+@keyframes curbl {
+  0% {
+    background: #ffffff;
+  }
+  49% {
+    background: #ffffff;
+  }
+  60% {
+    background: transparent;
+  }
+  99% {
+    background: transparent;
+  }
+  100% {
+    background: #ffffff;
+  }
+}
+
+.stars-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+
+.star-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+.star-layer:nth-child(1) {
+  transform: translateZ(-50px);
+  animation: star-drift 150s linear infinite;
+}
+
+.star-layer:nth-child(2) {
+  transform: translateZ(-100px);
+  animation: star-drift 200s linear infinite reverse;
+  opacity: 0.6;
+}
+
+.star-layer:nth-child(3) {
+  transform: translateZ(-200px);
+  animation: star-drift 250s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes star-drift {
+  0% {
+    transform: translateZ(-50px) translateY(0);
+  }
+  100% {
+    transform: translateZ(-50px) translateY(100%);
+  }
+}
+
+.star-layer::before,
+.star-layer::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.star-layer:nth-child(1)::before {
+  background-image: radial-gradient(1px 1px at 10% 10%, white 100%, transparent),
+    radial-gradient(1px 1px at 20% 20%, white 100%, transparent),
+    radial-gradient(2px 2px at 30% 30%, white 100%, transparent),
+    radial-gradient(1px 1px at 40% 40%, white 100%, transparent),
+    radial-gradient(2px 2px at 50% 50%, white 100%, transparent),
+    radial-gradient(1px 1px at 60% 60%, white 100%, transparent),
+    radial-gradient(2px 2px at 70% 70%, white 100%, transparent),
+    radial-gradient(1px 1px at 80% 80%, white 100%, transparent),
+    radial-gradient(2px 2px at 90% 90%, white 100%, transparent),
+    radial-gradient(1px 1px at 15% 85%, white 100%, transparent);
+}
+
+.grid-plane {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background-image: linear-gradient(rgba(0, 162, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 162, 255, 0.15) 1px, transparent 1px);
+  background-size: 40px 40px;
+  transform: perspective(500px) rotateX(60deg);
+  transform-origin: center;
+  animation: grid-move 20s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes grid-move {
+  0% {
+    transform: perspective(500px) rotateX(60deg) translateY(0);
+  }
+  100% {
+    transform: perspective(500px) rotateX(60deg) translateY(40px);
+  }
+}
+
+.checkbox-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 400px;
+  max-height: 500px;
+}
+
+.holo-checkbox-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.holo-checkbox {
+  position: relative;
+  width: clamp(60px, 10vw, 80px);
+  height: clamp(60px, 10vw, 80px);
+  cursor: pointer;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.holo-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(0, 162, 255, 0.7);
+  border-radius: 12px;
+  background-color: rgba(0, 24, 55, 0.5);
+  box-shadow: 0 0 10px rgba(0, 162, 255, 0.5), inset 0 0 15px rgba(0, 162, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.holo-inner {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background-color: rgba(0, 162, 255, 0.5);
+  border-radius: 4px;
+  opacity: 0;
+  transform: scale(0) rotate(45deg);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 162, 255, 0.8);
+}
+
+.scan-effect {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 162, 255, 0.8), transparent);
+  animation: scan-off 4s infinite;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+@keyframes scan-off {
+  0% {
+    left: -100%;
+    opacity: 0.3;
+  }
+  100% {
+    left: 100%;
+    opacity: 0.3;
+  }
+}
+
+@keyframes scan-on {
+  0% {
+    left: -100%;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 1;
+  }
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .holo-box {
+  border-color: rgba(0, 255, 136, 0.7);
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.6), inset 0 0 15px rgba(0, 255, 136, 0.4);
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .holo-inner {
+  background-color: rgba(0, 255, 136, 0.7);
+  box-shadow: 0 0 15px rgba(0, 255, 136, 1);
+  opacity: 1;
+  transform: scale(1) rotate(45deg);
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .scan-effect {
+  animation: scan-on 2s infinite;
+  opacity: 1;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.8), transparent);
+}
+
+.holo-glow {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  left: -50%;
+  top: -50%;
+  background: radial-gradient(ellipse at center, rgba(0, 162, 255, 0.2) 0%, rgba(0, 162, 255, 0.1) 40%, rgba(0, 0, 0, 0) 70%);
+  pointer-events: none;
+  filter: blur(10px);
+  opacity: 0.5;
+  z-index: -1;
+  animation: glow-pulse 4s infinite alternate;
+  transition: all 0.5s ease;
+}
+
+@keyframes glow-pulse {
+  0% {
+    opacity: 0.3;
+    filter: blur(10px) brightness(0.8);
+  }
+  100% {
+    opacity: 0.6;
+    filter: blur(15px) brightness(1.2);
+  }
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .holo-glow {
+  background: radial-gradient(ellipse at center, rgba(0, 255, 136, 0.2) 0%, rgba(0, 255, 136, 0.1) 40%, rgba(0, 0, 0, 0) 70%);
+  animation: active-glow-pulse 2s infinite alternate;
+}
+
+@keyframes active-glow-pulse {
+  0% {
+    opacity: 0.4;
+    filter: blur(10px) brightness(1);
+  }
+  100% {
+    opacity: 0.8;
+    filter: blur(20px) brightness(1.5);
+  }
+}
+
+.corner-accent {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(0, 162, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.corner-accent:nth-child(1) {
+  top: -5px;
+  left: -5px;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 5px 0 0 0;
+}
+
+.corner-accent:nth-child(2) {
+  top: -5px;
+  right: -5px;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 0 5px 0 0;
+}
+
+.corner-accent:nth-child(3) {
+  bottom: -5px;
+  left: -5px;
+  border-right: none;
+  border-top: none;
+  border-radius: 0 0 0 5px;
+}
+
+.corner-accent:nth-child(4) {
+  bottom: -5px;
+  right: -5px;
+  border-left: none;
+  border-top: none;
+  border-radius: 0 0 5px 0;
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .corner-accent {
+  width: 20px;
+  height: 20px;
+  border-color: rgba(0, 255, 136, 0.7);
+}
+
+.status-text {
+  margin-top: clamp(15px, 3vh, 30px);
+  font-size: clamp(12px, 2vw, 16px);
+  font-weight: 500;
+  color: rgba(0, 162, 255, 0.8);
+  text-shadow: 0 0 5px rgba(0, 162, 255, 0.5);
+  position: relative;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.status-text::before {
+  content: "SYSTEM DEACTIVATED";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.holo-checkbox-input:checked ~ .status-text::before {
+  content: "SYSTEM ACTIVATED";
+  color: rgba(0, 255, 136, 0.8);
+  text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
+}
+
+.activation-rings {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.activation-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  height: 40%;
+  border: 1px solid rgba(0, 255, 136, 0);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .activation-ring {
+  animation: ring-expand 2s ease-out forwards;
+  border-color: rgba(0, 255, 136, 0.7);
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .activation-ring:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .activation-ring:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .activation-ring:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes ring-expand {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+}
+
+.holo-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.holo-particle {
+  position: absolute;
+  background-color: rgba(0, 162, 255, 0.7);
+  border-radius: 50%;
+  width: 3px;
+  height: 3px;
+  opacity: 0;
+  filter: blur(1px);
+  transition: all 0.3s ease;
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .holo-particle {
+  background-color: rgba(0, 255, 136, 0.7);
+  animation: particle-float 3s infinite ease-in-out;
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .holo-particle:nth-child(1) {
+  top: 20%;
+  left: 30%;
+  animation-delay: 0.1s;
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .holo-particle:nth-child(2) {
+  top: 70%;
+  left: 20%;
+  animation-delay: 0.7s;
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .holo-particle:nth-child(3) {
+  top: 40%;
+  left: 80%;
+  animation-delay: 1.3s;
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .holo-particle:nth-child(4) {
+  top: 60%;
+  left: 60%;
+  animation-delay: 1.9s;
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .holo-particle:nth-child(5) {
+  top: 30%;
+  left: 45%;
+  animation-delay: 2.5s;
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .holo-particle:nth-child(6) {
+  top: 60%;
+  left: 40%;
+  animation-delay: 3.1s;
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px) scale(0);
+    opacity: 0;
+  }
+}
+
+.cube-transform {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  transform-style: preserve-3d;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cube-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 162, 255, 0.3);
+  border: 1px solid rgba(0, 162, 255, 0.5);
+  box-shadow: 0 0 5px rgba(0, 162, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .cube-transform {
+  opacity: 1;
+  animation: cube-rotate 5s infinite linear;
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .cube-face {
+  background-color: rgba(0, 255, 136, 0.3);
+  border-color: rgba(0, 255, 136, 0.5);
+  box-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .cube-face:nth-child(1) {
+  transform: translateZ(15px);
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .cube-face:nth-child(2) {
+  transform: rotateY(180deg) translateZ(15px);
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .cube-face:nth-child(3) {
+  transform: rotateY(90deg) translateZ(15px);
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .cube-face:nth-child(4) {
+  transform: rotateY(-90deg) translateZ(15px);
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .cube-face:nth-child(5) {
+  transform: rotateX(90deg) translateZ(15px);
+}
+
+.holo-checkbox-input:checked + .holo-checkbox .cube-face:nth-child(6) {
+  transform: rotateX(-90deg) translateZ(15px);
+}
+
+@keyframes cube-rotate {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+.frequency-spectrum {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: clamp(30px, 6vh, 40px);
+  width: clamp(200px, 90%, 260px);
+  margin-top: clamp(10px, 2vh, 15px);
+  gap: clamp(2px, 0.5vw, 3px);
+  position: relative;
+  z-index: 5;
+}
+
+.frequency-bar {
+  width: clamp(2px, 0.8vw, 4px);
+  height: 5px;
+  background: rgba(0, 162, 255, 0.5);
+  border-radius: 2px 2px 0 0;
+  transition: height 0.3s ease, background 0.3s ease;
+  flex: 1;
+  max-width: 6px;
+}
+
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar {
+  background: rgba(0, 255, 136, 0.5);
+  animation: frequency-animation 1.5s infinite ease;
+}
+
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(3) {
+  animation-delay: 0.1s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(6) {
+  animation-delay: 0.2s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(7) {
+  animation-delay: 0.4s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(8) {
+  animation-delay: 0.1s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(9) {
+  animation-delay: 0.3s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(10) {
+  animation-delay: 0.2s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(11) {
+  animation-delay: 0.5s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(12) {
+  animation-delay: 0.3s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(13) {
+  animation-delay: 0.1s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(14) {
+  animation-delay: 0.4s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(15) {
+  animation-delay: 0.2s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(16) {
+  animation-delay: 0.3s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(17) {
+  animation-delay: 0.1s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(18) {
+  animation-delay: 0.5s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(19) {
+  animation-delay: 0.2s;
+}
+.holo-checkbox-input:checked ~ .frequency-spectrum .frequency-bar:nth-child(20) {
+  animation-delay: 0.4s;
+}
+
+@keyframes frequency-animation {
+  0% {
+    height: 5px;
+  }
+  50% {
+    height: 35px;
+  }
+  100% {
+    height: 5px;
+  }
+}
+
+.data-chips {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  pointer-events: none;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(3px, 1vw, 5px);
+  margin-top: clamp(8px, 2vh, 10px);
+  z-index: 5;
+}
+
+.data-chip {
+  padding: clamp(4px, 0.8vw, 5px) clamp(6px, 1vw, 8px);
+  background-color: rgba(0, 24, 55, 0.7);
+  border: 1px solid rgba(0, 162, 255, 0.5);
+  border-radius: 4px;
+  font-size: clamp(8px, 1.2vw, 10px);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease;
+  position: static;
+  white-space: nowrap;
+}
+
+.holo-checkbox-input:checked ~ .data-chips .data-chip {
+  animation: chip-appear 0.5s ease forwards;
+  border-color: rgba(0, 255, 136, 0.5);
+  position: static;
+}
+
+.data-chip:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.data-chip:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.data-chip:nth-child(3) {
+  animation-delay: 1.8s;
+}
+
+.data-chip:nth-child(4) {
+  animation-delay: 2.3s;
+}
+
+.activation-display {
+  display: none;
+  flex-direction: column;
+  margin-top: clamp(10px, 2vh, 20px);
+  font-family: 'Courier New', monospace;
+  font-size: clamp(10px, 1.5vw, 12px);
+  color: rgba(0, 162, 255, 0.8);
+  text-shadow: 0 0 5px rgba(0, 162, 255, 0.5);
+  gap: clamp(5px, 1vh, 8px);
+  z-index: 5;
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+}
+
+.activation-line {
+  color: rgba(0, 162, 255, 0.8);
+  text-shadow: 0 0 5px rgba(0, 162, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.activation-line span {
+  color: rgba(0, 255, 136, 0.8);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#cpu-usage.max,
+#power-level.max {
+  color: #ff0000;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+  font-weight: bold;
+  animation: pulse-red 0.5s infinite alternate;
+}
+
+#o2-ok,
+#n2-ok,
+#life-ok {
+  color: rgba(0, 255, 136, 0.8);
+}
+
+@keyframes pulse-red {
+  0% {
+    text-shadow: 0 0 5px #ff0000;
+  }
+  100% {
+    text-shadow: 0 0 15px #ff0000, 0 0 25px #ff0000;
+  }
+}
+
+/* Responsive scaling for different screen sizes */
+@media (max-width: 1440px) {
+  .solar {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 1200px) {
+  .solar {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 1024px) {
+  .solar {
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 768px) {
+  .checkbox-container {
+    max-width: 300px;
+    max-height: 400px;
+    padding: 15px;
+  }
+  
+  .solar {
+    transform: scale(0.55);
+  }
+  
+  .loader-wrapper {
+    width: 120px;
+    height: 120px;
+    font-size: medium;
+  }
+  
+  .loader {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .checkbox-container {
+    max-width: 280px;
+    max-height: 380px;
+    padding: 12px;
+  }
+  
+  .solar {
+    transform: scale(0.42);
+  }
+}
+
+@media (max-width: 480px) {
+  .checkbox-container {
+    max-width: 250px;
+    max-height: 350px;
+    padding: 10px;
+  }
+  
+  .solar {
+    transform: scale(0.32);
+  }
+  
+  .loader-wrapper {
+    width: 100px;
+    height: 100px;
+    font-size: small;
+  }
+  
+  .loader-letter {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 360px) {
+  .checkbox-container {
+    max-width: 220px;
+    max-height: 320px;
+    padding: 8px;
+  }
+  
+  .solar {
+    transform: scale(0.25);
+  }
+  
+  .loader-wrapper {
+    width: 80px;
+    height: 80px;
+    font-size: x-small;
+  }
+  
+  .loader-letter {
+    font-size: 0.6em;
+  }
+}
 
 
 
